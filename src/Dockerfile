@@ -6,7 +6,7 @@ COPY . /app
 
 RUN pip install --no-cache-dir fastapi uvicorn requests openap
 
-EXPOSE 80
+EXPOSE 8610
 
-CMD [ "uvicorn", "svcinvest.main:app", "--host", "0.0.0.0", "--port", "5000" ]
+CMD [ "uvicorn", "svcinvest.main:app", "--host", "0.0.0.0", "--port", "8610", "--root-path", "/api/v1"]
 
