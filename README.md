@@ -20,3 +20,14 @@ This code use, LLM tools, agents.
  'intermediate_steps': [(AgentActionMessageLog(tool='StockPriceTool', tool_input={'stock_ticker': 'AMZN'}, log="\nInvoking: `StockPriceTool` with `{'stock_ticker': 'AMZN'}`\n\n\n", message_log=[AIMessage(content='', additional_kwargs={'function_call': {'name': 'StockPriceTool', 'arguments': '{\n  "stock_ticker": "AMZN"\n}'}})]),
    155.34)]}
 ```
+
+### Useful Commands to run api service on docker
+```
+  $docker-compose up -d --build
+  $docker-compose down
+```
+
+
+
+### Access API service through prox
+URI : http://localhost:8080/fintech/stock
