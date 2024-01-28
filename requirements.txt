@@ -1,3 +1,8 @@
-fastapi[all]>=0.68.0,<0.69.0
+fastapi==0.109.0
 pydantic>=1.8.0,<2.0.0
 uvicorn>=0.15.0,<0.16.0
+yfinance==0.2.36
+langchain==0.1.4
+pydantic==1.10.14
+uvicorn==0.15.0
+devenv==0.1.1
