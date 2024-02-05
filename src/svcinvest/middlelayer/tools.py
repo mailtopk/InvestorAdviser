@@ -3,7 +3,7 @@ from pydantic import BaseModel
 from typing import Type
 from langchain.tools import BaseTool
 
-from src.svcinvest.middleLayer.models.stockmodels import (
+from svcinvest.middleLayer.models.stockmodels import (
     StockPriceCheckInput, 
     RecommendationStockInput
 )

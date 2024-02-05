@@ -7,7 +7,7 @@ from langchain.agents.format_scratchpad import format_to_openai_function_message
 from langchain.agents.output_parsers import OpenAIFunctionsAgentOutputParser
 from langchain.agents import AgentExecutor
 
-from src.svcinvest.middleLayer.tools import get_stock_tools
+from svcinvest.middleLayer.tools import get_stock_tools
 load_dotenv()
 
 def get_prompt():
