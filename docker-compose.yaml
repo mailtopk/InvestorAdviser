@@ -5,7 +5,7 @@ services:
     ports:
       - "8610"
     env_file:
-      - ./src/.env
+      - ./src/svcinvest/.env
   nginx:
     image: nginx:latest
     volumes:
