@@ -1,5 +1,4 @@
 from pydantic import BaseModel, Field
-
 import yfinance as yf
 from typing import Any, Type
 

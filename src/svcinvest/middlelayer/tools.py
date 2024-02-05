@@ -1,7 +1,6 @@
 import yfinance as yf
-
 from pydantic import BaseModel
-from typing import Any, Type
+from typing import Type
 from langchain.tools import BaseTool
 
 from models.stockmodels import (
@@ -39,3 +38,4 @@ class RecommendationStockTool(BaseTool):
 
 def get_stock_tools():
     return [StockPriceTool(), RecommendationStockTool()]
+
