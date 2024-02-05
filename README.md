@@ -27,7 +27,10 @@ This code use, LLM tools, agents.
   $docker-compose down
 ```
 
-
-
 ### Access API service through prox
 URI : http://localhost:8080/fintech/stock
+
+### Run api's without docker command
+```
+$uvicorn src.svcinvest.apiLayer.main:app
+```

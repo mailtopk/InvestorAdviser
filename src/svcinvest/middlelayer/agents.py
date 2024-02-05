@@ -7,7 +7,7 @@ from langchain.agents.format_scratchpad import format_to_openai_function_message
 from langchain.agents.output_parsers import OpenAIFunctionsAgentOutputParser
 from langchain.agents import AgentExecutor
 
-import tools
+from src.svcinvest.middleLayer.tools import get_stock_tools
 load_dotenv()
 
 def get_prompt():
@@ -21,7 +21,7 @@ def get_prompt():
     ])
 
 def get_agent():
-    stock_tools = tools.get_stock_tools()    
+    stock_tools = get_stock_tools()    
     llm = ChatOpenAI( api_key=os.environ['MY_API_Key'],
                    temperature=0, max_retries=2).bind(functions = [format_tool_to_openai_function(f) for f in stock_tools])
 

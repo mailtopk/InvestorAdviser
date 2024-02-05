@@ -5,6 +5,7 @@ from src.svcinvest.apiLayer.ReqReplyModel import (
     StockAdviceRequest,
     Response
 )
+from src.svcinvest.middleLayer import agents
 
 app = FastAPI()
 router = APIRouter()
@@ -17,6 +18,10 @@ def read_root():
 @router.post("/stock", tags=["Stock"])
 def read_root(request: StockAdviceRequest):
    # print('in test path ' + request.scope.get("root_path"))
-    return request
+    openai_agent = agents.get_agent()
+    openapi_request = {"input" : request.question}
+    openai_response = openai_agent.invoke(openapi_request)
+
+    return openai_response
 
 app.include_router(router)
