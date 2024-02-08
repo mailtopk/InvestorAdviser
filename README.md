@@ -27,10 +27,19 @@ This code use, LLM tools, agents.
   $docker-compose down
 ```
 
+### Swagger doc url
+URL : http://localhost:8080/docs
+
 ### Access API service through prox
-URI : http://localhost:8080/fintech/stock
+URL : http://localhost:8080/fintech/stock
 
 ### Run api's without docker command
 ```
 $uvicorn src.svcinvest.apiLayer.main:app
+```
+
+### Docker command
+Recreate docker image
+``` 
+docker-compose up -d --build --force-recreate -V
 ```
